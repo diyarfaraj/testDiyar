@@ -13,13 +13,13 @@ export class Counter extends Component {
 
   incrementCounter() {
     this.setState({
-      currentCount: this.state.currentCount + 1
+      currentCount: this.state.currentCount + 3
     });
     }
 
     decrementCounter() {
         this.setState({
-            currentCount: this.state.currentCount - 1
+            currentCount: this.state.currentCount - 43
         })
     }
 
@@ -28,12 +28,14 @@ export class Counter extends Component {
       <div>
         <h1>Counter</h1>
 
-        <p>This is a simple example of a React component.</p>
+            <p>This is a simple example of a React component.</p>
+            <input type="text" name="fname" className="input" value={this.state.currentCount} />
 
         <p aria-live="polite">Current count: <strong>{this.state.currentCount}</strong></p>
 
             <button className="btn btn-primary" onClick={this.incrementCounter}>Increment</button>
             <button className="btn btn-primary" onClick={this.decrementCounter}>Decrement</button>
+            
 
       </div>
     );
